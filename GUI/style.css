@@ -1,0 +1,88 @@
+.right-content{
+     text-align: center;
+    margin-top: 20px;
+    float: left;
+    width: 45%;
+}
+    
+.left-float{
+    float: left;
+}
+    
+.right-float{
+     float: right;
+}
+    
+    
+.imageView{
+    width: 100%;
+     height: 90%;
+}
+    
+.item{
+    display: block;
+    float: left;
+    width: 350px;
+    margin: 5px;
+    height: 350px; /* 1:1 Aspect Ratio */
+    position: relative; /* If you want text inside of it */
+    border: 2px solid black;
+    background-color: rgb(154, 173, 173);
+    padding: 40px;
+}
+    
+#banner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+    
+#text{
+    width: 633px;
+    margin: auto;
+    height: 95px;
+    display: block;
+}
+    
+#cart1{
+    width: 50%;
+    width: 150px;
+    margin: auto; 
+    height: 150px;
+}
+    
+#cart2{
+    width: 150px;
+    margin: auto;
+    height: 150px;
+}
+    
+.inline-block {
+    display: inline-block;
+}
+    
+#search{
+    display: inline;
+}
+    
+#top-bar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; 
+    margin: 3px 5px;
+    border: 1px solid black;
+    background-color: rgb(154, 173, 173);
+}
+    
+#content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; 
+    width:100%;
+}

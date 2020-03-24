@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaStop n’ Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script> <!--Replace with whatever is needed, this is JUST A PLACEHOLDER-->
+</head>
+
+<body>
+    <style> body{background-color: #8db3b6;} </style>
+    <div id="banner"> <!--Logo at the top of the page-->
+        <!--This logo is just a sample, you guys can change if you want-->
+        <div class="inline-block">
+            <img src="cart.png" alt="[SPACE SAVED FOR LOGO]" id="cart1"> 
+        </div>
+        <div class="inline-block">
+            <img src="text.png" alt="[SPACE SAVED FOR LOGO]" id="text"> 
+        </div>
+        <div class="inline-block">
+            <img src="cart.png" alt="[SPACE SAVED FOR LOGO]" id="cart2"> 
+        </div>
+    </div>
+
+    <div id="top-bar">  <!-- Utilities bar-->
+        <form action="#" onsubmit="submit()" id="search">
+            <input type="text" name="search" id="search" placeholder="Search">
+            <input type="submit" value="submit">
+        </form>
+        <button onclick="checkout()">Checkout</button>
+        <button onclick="wishlist()">Wishlist</button>
+    </div>
+<!-- 
+    for search functionality, likely have to modify this to take data from a JS list, and just order them based on what is in the search bar
+    this will be similar to how it worked in the car search assignment thing.
+
+    When adding said list functionality, try to change the alt text to the name of the item, so if for some reason the image doesnt load you can 
+    tell what it is. 
+-->
+    <div id=content> <!-- Spaces for the items and their utilities, Add more/resize if you need-->
+        <span class=item>
+          <img src="" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+          <button class="right-content left-float" onclick="checkout()">Add To Cart</button>
+          <button class="right-content right-float" onclick="wishlist()">Add To Wishlist</button>
+        </span>
+
+        <span class=item>
+        <img src="sampleLogo.png" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/> <!-- This one only has this image to show what it should look like when it has a proper item-->
+        <button class="right-content left-float" onclick="checkout()">Add To Cart</button>
+        <button class="right-content right-float" onclick="wishlist()">Add To Wishlist</button>
+        </span>
+
+        <span class=item>
+        <img src="" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+        <button class="right-content left-float" onclick="checkout()">Add To Cart</button>
+        <button class="right-content right-float" onclick="wishlist()">Add To Wishlist</button>
+        </span>
+
+        <span class=item>
+            <img src="" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+            <button class="right-content left-float" onclick="checkout()">Add To Cart</button>
+            <button class="right-content right-float" onclick="wishlist()">Add To Wishlist</button>
+        </span>
+
+        <span class=item>
+            <img src="" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+            <button class="right-content left-float" onclick="checkout()">Add To Cart</button>
+            <button class="right-content right-float" onclick="wishlist()">Add To Wishlist</button>
+        </span>
+
+        <span class=item>
+            <img src="" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+            <button class="right-content left-float" onclick="checkout()">Add To Cart</button>
+            <button class="right-content right-float" onclick="wishlist()">Add To Wishlist</button>
+        </span>
+
+        <span class=item>
+            <img src="" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+            <button class="right-content left-float" onclick="checkout()">Add To Cart</button>
+            <button class="right-content right-float" onclick="wishlist()">Add To Wishlist</button>
+        </span>
+
+        <span class=item>
+            <img src="" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+            <button class="right-content left-float" onclick="checkout()">Add To Cart</button>
+            <button class="right-content right-float" onclick="wishlist()">Add To Wishlist</button>
+        </span>
+
+        <span class=item>
+            <img src="" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+            <button class="right-content left-float" onclick="checkout()">Add To Cart</button>
+            <button class="right-content right-float" onclick="wishlist()">Add To Wishlist</button>
+          </span>
+
+          <span class=item>
+            <img src="" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+            <button class="right-content left-float" onclick="checkout()">Add To Cart</button>
+            <button class="right-content right-float" onclick="wishlist()">Add To Wishlist</button>
+        </span>
+
+        <span class=item>
+            <img src="" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+            <button class="right-content left-float" onclick="checkout()">Add To Cart</button>
+            <button class="right-content right-float" onclick="wishlist()">Add To Wishlist</button>
+        </span>
+
+        <span class=item>
+            <img src="" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+            <button class="right-content left-float" onclick="checkout()">Add To Cart</button>
+            <button class="right-content right-float" onclick="wishlist()">Add To Wishlist</button>
+          </span>
+    </div>
+
+</body>
+
+</html>
