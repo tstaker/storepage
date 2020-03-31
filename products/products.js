@@ -37,7 +37,33 @@ var products = [
 	
 	{"name":"chips",
 	"type":"other"
-	"price":3}
+	"price":3},
+
+	{"name":"cheese",
+	"type":"dairy"
+	"price":3},
 	
+	{"name":"milk",
+	"type":"dairy",
+	"price":4}
 	
-]
+];
+var cart = [
+	{"name": null,
+	"type":null,
+	"price":0}
+];
+
+function getName(int x){
+	return products[x].name;
+}
+function getType(int x){
+	return products[x].type;
+}
+function getPrice(int x){
+	return products[x].price;
+}
+
+function addToCart(int x){
+	cart.push(products[x]);
+}
