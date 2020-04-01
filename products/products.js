@@ -2,51 +2,51 @@
 var products = [
 	{"name":"apple",
 	"type":"fruit",
-	"price":2},
+	"price":"$2.00"},
 	
 	{"name":"banana",
-	"type":"fruit"
-	"price":1},
+	"type":"fruit",
+	"price":"$1.00"},
 	
 	{"name":"potato",
 	"type":"vegetable",
-	"price":2},
+	"price":"$2.00"},
 	
 	{"name":"celery",
 	"type": "vegetable",
-	"price":2},
+	"price":"$2.00"},
 	
 	{"name":"coffee",
-	"type":"drink"
-	"price":3},
+	"type":"drink",
+	"price":"$3.00"},
 	
 	{"name":"soda",
-	"type":"drink"
-	"price":2},
+	"type":"drink",
+	"price":"$2.00"},
 	
 	{"name":"beef",
-	"type":"meat"
-	"price":5},
+	"type":"meat",
+	"price":"$5.00"},
 	
 	{"name":"chicken",
-	"type":"meat"
-	"price":4},
+	"type":"meat",
+	"price":"$4.00"},
 	
 	{"name":"pork",
-	"type":"meat"
-	"price":4},
+	"type":"meat",
+	"price":"$4.00"},
 	
 	{"name":"chips",
-	"type":"other"
-	"price":3},
+	"type":"other",
+	"price":"$3.00"},
 
 	{"name":"cheese",
-	"type":"dairy"
-	"price":3},
+	"type":"dairy",
+	"price":"$3.00"},
 	
 	{"name":"milk",
 	"type":"dairy",
-	"price":4}
+	"price":"$4.00"}
 	
 ];
 var cart = [
@@ -54,17 +54,23 @@ var cart = [
 	"type":null,
 	"price":0}
 ];
-
-function getName(int x){
+function products(){
+	products.forEach(generateNameAndPrice);
+}
+function getName(x){
 	return products[x].name;
 }
-function getType(int x){
+function getType(x){
 	return products[x].type;
 }
-function getPrice(int x){
+function getPrice(x){
 	return products[x].price;
 }
 
-function addToCart(int x){
+function addToCart(x){
 	cart.push(products[x]);
+}
+function generateNameAndPrice(x){
+	document.getElementById("itemName" + x).innerHTML = item.name;
+	document.getElementById("itemPrice" + x).innerHTML = item.price;
 }
