@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaStop n’ Shop</title>
     <link rel="stylesheet" href="style.css">
+	<script src="./search.js"></script>
 </head>
 
 <body>
@@ -17,120 +18,122 @@
             <img src="cart.png" alt="[SPACE SAVED FOR LOGO]" id="cart1"> 
         </div>
         <div class="inline-block">
-            <img src="text.png" alt="[SPACE SAVED FOR LOGO]" id="text"> 
+            <img src="text.png" alt="[SPACE SAVED FOR LOGO]" id="text">
         </div>
         <div class="inline-block">
-            <img src="cart.png" alt="[SPACE SAVED FOR LOGO]" id="cart2"> 
+            <img src="cart.png" alt="[SPACE SAVED FOR LOGO]" id="cart2">
         </div>
     </div>
 
     <div id="top-bar">  <!-- Utilities bar-->
-        <form action="#" onsubmit="submit()" id="search">
-            <input type="text" name="search" id="search" placeholder="Search">
-            <input type="submit" value="Search">
+        <form action="#" onsubmit="return submitThis()" id="searchbox">
+            <input type="text" name="searchtext" id="searchtext" placeholder="Search">
+            <input type="submit" name="submit" value="Search">
         </form>
         <button onclick="checkout()">Checkout</button>
         <button onclick="wishlist()">Wishlist</button>
     </div>
 <!-- 
-    for search functionality, likely have to modify this to take data from a JS list, and just order them based on what is in the search bar
+    for search functionality, likely have to modify this to take data from a JS list, 
+	and just order them based on what is in the search bar
     this will be similar to how it worked in the car search assignment thing.
 
-    When adding said list functionality, try to change the alt text to the name of the item, so if for some reason the image doesnt load you can 
+    When adding said list functionality, try to change the alt text to the name of the 
+	item, so if for some reason the image doesnt load you can 
     tell what it is. 
 -->
     <div id=content> <!-- Spaces for the items and their utilities, Add more/resize if you need-->
-        <span class=item>
-          <img src="" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
-            <p id = itemName> [PUT NAME HERE] </p>
+        <span class=item id=item1>
+			<img src="" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+			<p id = itemName> [PUT NAME HERE] </p>
             <p id = itemPrice> [PUT Price HERE] </p>
-          <button class="right-content left-float" onclick="checkout()">Add To Cart</button>
-          <button class="right-content right-float" onclick="wishlist()">Add To Wishlist</button>
+			<button class="right-content left-float" onclick="checkout()">Add To Cart</button>
+			<button class="right-content right-float" onclick="wishlist()">Add To Wishlist</button>
         </span>
 
-        <span class=item>
-        <img src="" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/> <!-- This one only has this image to show what it should look like when it has a proper item-->
-        <p id = itemName> [PUT NAME HERE] </p>
-        <p id = itemPrice> [PUT Price HERE] </p>
-        <button class="right-content left-float" onclick="checkout()">Add To Cart</button>
-        <button class="right-content right-float" onclick="wishlist()">Add To Wishlist</button>
-        </span>
-
-        <span class=item>
-        <img src="" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
-        <p id = itemName> [PUT NAME HERE] </p>
-        <p id = itemPrice> [PUT Price HERE] </p>
-        <button class="right-content left-float" onclick="checkout()">Add To Cart</button>
-        <button class="right-content right-float" onclick="wishlist()">Add To Wishlist</button>
-        </span>
-
-        <span class=item>
-            <img src="" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
-            <p id = itemName> [PUT NAME HERE] </p>
+        <span class=item id=item2>
+			<img src="sampleLogo.png" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/> <!-- This one only has this image to show what it should look like when it has a proper item-->
+			<p id = itemName> [PUT NAME HERE] </p>
             <p id = itemPrice> [PUT Price HERE] </p>
-            <button class="right-content left-float" onclick="checkout()">Add To Cart</button>
-            <button class="right-content right-float" onclick="wishlist()">Add To Wishlist</button>
+			<button class="right-content left-float" onclick="checkout()">Add To Cart</button>
+			<button class="right-content right-float" onclick="wishlist()">Add To Wishlist</button>
         </span>
 
-        <span class=item>
+        <span class=item id=item3>
+			<img src="" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+			<p id = itemName> [PUT NAME HERE] </p>
+            <p id = itemPrice> [PUT Price HERE] </p>
+			<button class="right-content left-float" onclick="checkout()">Add To Cart</button>
+			<button class="right-content right-float" onclick="wishlist()">Add To Wishlist</button>
+        </span>
+
+        <span class=item id=item4>
             <img src="" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
-            <p id = itemName> [PUT NAME HERE] </p>
+			<p id = itemName> [PUT NAME HERE] </p>
             <p id = itemPrice> [PUT Price HERE] </p>
             <button class="right-content left-float" onclick="checkout()">Add To Cart</button>
             <button class="right-content right-float" onclick="wishlist()">Add To Wishlist</button>
         </span>
 
-        <span class=item>
+        <span class=item id=item5>
             <img src="" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
-            <p id = itemName> [PUT NAME HERE] </p>
+			<p id = itemName> [PUT NAME HERE] </p>
             <p id = itemPrice> [PUT Price HERE] </p>
             <button class="right-content left-float" onclick="checkout()">Add To Cart</button>
             <button class="right-content right-float" onclick="wishlist()">Add To Wishlist</button>
         </span>
 
-        <span class=item>
+        <span class=item id=item6>
             <img src="" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
-            <p id = itemName> [PUT NAME HERE] </p>
+			<p id = itemName> [PUT NAME HERE] </p>
             <p id = itemPrice> [PUT Price HERE] </p>
             <button class="right-content left-float" onclick="checkout()">Add To Cart</button>
             <button class="right-content right-float" onclick="wishlist()">Add To Wishlist</button>
         </span>
 
-        <span class=item>
+        <span class=item id=item7>
             <img src="" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
-            <p id = itemName> [PUT NAME HERE] </p>
+			<p id = itemName> [PUT NAME HERE] </p>
             <p id = itemPrice> [PUT Price HERE] </p>
             <button class="right-content left-float" onclick="checkout()">Add To Cart</button>
             <button class="right-content right-float" onclick="wishlist()">Add To Wishlist</button>
         </span>
 
-        <span class=item>
+        <span class=item id=item8>
             <img src="" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
-            <p id = itemName> [PUT NAME HERE] </p>
+			<p id = itemName> [PUT NAME HERE] </p>
+            <p id = itemPrice> [PUT Price HERE] </p>
+            <button class="right-content left-float" onclick="checkout()">Add To Cart</button>
+            <button class="right-content right-float" onclick="wishlist()">Add To Wishlist</button>
+        </span>
+
+        <span class=item id=item9>
+            <img src="" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+			<p id = itemName> [PUT NAME HERE] </p>
             <p id = itemPrice> [PUT Price HERE] </p>
             <button class="right-content left-float" onclick="checkout()">Add To Cart</button>
             <button class="right-content right-float" onclick="wishlist()">Add To Wishlist</button>
           </span>
 
-          <span class=item>
+          <span class=item id=item10>
             <img src="" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
-            <p id = itemName> [PUT NAME HERE] </p>
+			<p id = itemName> [PUT NAME HERE] </p>
             <p id = itemPrice> [PUT Price HERE] </p>
             <button class="right-content left-float" onclick="checkout()">Add To Cart</button>
             <button class="right-content right-float" onclick="wishlist()">Add To Wishlist</button>
         </span>
 
-        <span class=item>
+        <span class=item id=item11>
             <img src="" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
-            <p id = itemName> [PUT NAME HERE] </p>
+			<p id = itemName> [PUT NAME HERE] </p>
             <p id = itemPrice> [PUT Price HERE] </p>
             <button class="right-content left-float" onclick="checkout()">Add To Cart</button>
             <button class="right-content right-float" onclick="wishlist()">Add To Wishlist</button>
         </span>
 
-        <span class=item>
+        <span class=item id=item12>
             <img src="" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
-            <p id = itemName> [PUT NAME HERE] </p>
+			<p id = itemName> [PUT NAME HERE] </p>
             <p id = itemPrice> [PUT Price HERE] </p>
             <button class="right-content left-float" onclick="checkout()">Add To Cart</button>
             <button class="right-content right-float" onclick="wishlist()">Add To Wishlist</button>
