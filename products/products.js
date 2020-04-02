@@ -8,71 +8,71 @@ var products = [
 	"type":"fruit",
 	"price":"$1.00"},
 	
-	{"name":"beef",
+	{"name":"Beef",
 	"type":"meat",
 	"price":"$5.00"},
 	
-	{"name":"celery",
+	{"name":"Celery",
 	"type": "vegetable",
 	"price":"$2.00"},
 	
-	{"name":"cheese",
+	{"name":"Cheese",
 	"type":"dairy",
 	"price":"$3.00"},
 	
-	{"name":"chicken",
+	{"name":"Chicken",
 	"type":"meat",
 	"price":"$4.00"},
 
-	{"name":"chips",
+	{"name":"Chips",
 	"type":"other",
 	"price":"$3.00"},
 	
-	{"name":"coffee",
+	{"name":"Coffee",
 	"type":"drink",
 	"price":"$3.00"},
 	
-	{"name":"milk",
+	{"name":"Milk",
 	"type":"dairy",
 	"price":"$4.00"},
 	
-	{"name":"pork",
+	{"name":"Pork",
 	"type":"meat",
 	"price":"$4.00"},
 		
-	{"name":"potato",
+	{"name":"Potato",
 	"type":"vegetable",
 	"price":"$2.00"},
 		
-	{"name":"soda",
+	{"name":"Soda",
 	"type":"drink",
 	"price":"$2.00"}
 	
-
 ];
 var cart = [
 	{"name": null,
 	"type":null,
-	"price":0}
+	"price":null}
 ];
 function products(){
 	products.forEach(generateNameAndPrice);
 }
-function getName(x){
-	return products[x].name;
-}
+
 function getType(x){
 	return products[x].type;
-}
-function getPrice(x){
-	return products[x].price;
 }
 
 function addToCart(x){
 	cart.push(products[x-1]);
 }
+function checkOut(){
+	
+}
+
 function generateNameAndPrice(x){
 	var item = products[x-1];
 	document.getElementById("itemName" + x).innerHTML = item.name;
+	document.getElementById("itemName" + x).style.fontSize = "xx-large";
 	document.getElementById("itemPrice" + x).innerHTML = item.price;
+	document.getElementById("itemPrice" + x).style.fontSize = "xx-large";
 }
