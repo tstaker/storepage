@@ -76,3 +76,19 @@ function generateNameAndPrice(x){
 	document.getElementById("itemPrice" + x).innerHTML = item.price;
 	document.getElementById("itemPrice" + x).style.fontSize = "xx-large";
 }
+
+function checkOut(){
+	window.location.href = "./checkOut.html";
+}
+
+function getCart(){
+	for(let i = 1;i<cart.length;++i){
+		var item = cart[i];
+		var itemDisplay = "<p>";
+		itemDisplay = itemDisplay + item.name + " - " + item.price;
+		itemDisplay = itemDisplay + "</p>";
+		document.getElementById("cart").appendChild(itemDisplay);	
+		}
+	
+}
+
