@@ -59,20 +59,15 @@ function wishlist() {
 }
 
 function pushTowishlist(x,list){
+	
     var thisItem = products[x-1];
-    var y = 1;
 
     var thisName = document.getElementById("itemName"+x).innerText = thisItem.name;
     var thisPrice = document.getElementById("itemPrice"+x).innerText = thisItem.price;
     var thisTotal = thisName+' '+thisPrice;
     var li = document.createElement("li");
     var thisProduct = document.createTextNode(thisTotal);
-    li.appendChild(thisProduct);
-
-    if(myList.contains(thisProduct) === true){
-	y++;
-	thisProduct = document.createTextNode(y + thisProduct);
-    }
+	li.appendChild(thisProduct);
 
     var removeBtn = document.createElement("input");
     removeBtn.type = "button";
