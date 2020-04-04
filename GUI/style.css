@@ -86,3 +86,13 @@
     align-items: center; 
     width:100%;
 }
+
+#myWishlist {
+     visibilty: hidden;
+     float: right;
+     width: 25%;
+     padding: 50px 0;
+     text-align: center;
+     background-color: orange;
+     margin-top: 20px;
+}
