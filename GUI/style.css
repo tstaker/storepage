@@ -88,7 +88,7 @@
 }
 
 #myWishlist {
-     visibilty: hidden;
+     display: none; /* fixed the error that was here */
      float: right;
      width: 25%;
      padding: 50px 0;
