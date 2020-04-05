@@ -29,11 +29,12 @@
 
     <div id="top-bar">  <!-- Utilities bar-->
         <form action="#" onsubmit="return submitThis()" id="searchbox">
-            <input type="text" name="searchtext" id="searchtext" placeholder="Search">
-            <input type="submit" name="submit" value="Search">
+            <input type="text" size="25" name="searchtext" id="searchtext" placeholder="Search by type, price, or name">
+            <input type="submit" name="submit" style="margin:5px" value="Search">
         </form>
-        <button onclick="checkOut()">Checkout</button>
-        <button onclick="wishlist()">Wishlist</button>
+		<button onclick="home()" style="margin:5px">Home</button>
+        <button onclick="checkOut()" style="margin:5px">Checkout</button>
+        <button onclick="wishlist()" style="margin:5px">Wishlist</button>
     </div>
 
     <div id="myWishlist">
