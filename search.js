@@ -4,54 +4,55 @@
 
 var submitThis = function(){
 	var products = [
-	{"name":"apple",
+	{"name":"Apple",
 	"type":"fruit",
-	"price":2},
+	"price":"$2.00"},
 	
-	{"name":"banana",
+	{"name":"Banana",
 	"type":"fruit",
-	"price":1},
+	"price":"$1.00"},
 	
-	{"name":"potato",
-	"type":"vegetable",
-	"price":2},
+	{"name":"Beef",
+	"type":"meat",
+	"price":"$5.00"},
 	
-	{"name":"celery",
+	{"name":"Celery",
 	"type": "vegetable",
-	"price":2},
+	"price":"$2.00"},
 	
-	{"name":"coffee",
-	"type":"drink",
-	"price":3},
+	{"name":"Cheese",
+	"type":"dairy",
+	"price":"$3.00"},
 	
-	{"name":"soda",
-	"type":"drink",
-	"price":2},
-	
-	{"name":"beef",
+	{"name":"Chicken",
 	"type":"meat",
-	"price":5},
-	
-	{"name":"chicken",
-	"type":"meat",
-	"price":4},
-	
-	{"name":"pork",
-	"type":"meat",
-	"price":4},
-	
-	{"name":"chips",
+	"price":"$4.00"},
+
+	{"name":"Chips",
 	"type":"other",
-	"price":3},
+	"price":"$3.00"},
 	
-	{"name":"cheese",
-	"type":"dairy",
-	"price":3},
+	{"name":"Coffee",
+	"type":"drink",
+	"price":"$3.00"},
 	
-	{"name":"milk",
+	{"name":"Milk",
 	"type":"dairy",
-	"price":4}
-	];
+	"price":"$4.00"},
+	
+	{"name":"Pork",
+	"type":"meat",
+	"price":"$4.00"},
+		
+	{"name":"Potato",
+	"type":"vegetable",
+	"price":"$2.00"},
+		
+	{"name":"Soda",
+	"type":"drink",
+	"price":"$2.00"}
+	
+];
 	
 	var item = document.getElementById("searchtext");
 	var filter = item.value.toLowerCase();
@@ -69,55 +70,56 @@ var submitThis = function(){
 }
 
 function home(){
-	var products = [
-	{"name":"apple",
+var products = [
+	{"name":"Apple",
 	"type":"fruit",
-	"price":2},
+	"price":"$2.00"},
 	
-	{"name":"banana",
+	{"name":"Banana",
 	"type":"fruit",
-	"price":1},
+	"price":"$1.00"},
 	
-	{"name":"potato",
-	"type":"vegetable",
-	"price":2},
+	{"name":"Beef",
+	"type":"meat",
+	"price":"$5.00"},
 	
-	{"name":"celery",
+	{"name":"Celery",
 	"type": "vegetable",
-	"price":2},
+	"price":"$2.00"},
 	
-	{"name":"coffee",
-	"type":"drink",
-	"price":3},
+	{"name":"Cheese",
+	"type":"dairy",
+	"price":"$3.00"},
 	
-	{"name":"soda",
-	"type":"drink",
-	"price":2},
-	
-	{"name":"beef",
+	{"name":"Chicken",
 	"type":"meat",
-	"price":5},
-	
-	{"name":"chicken",
-	"type":"meat",
-	"price":4},
-	
-	{"name":"pork",
-	"type":"meat",
-	"price":4},
-	
-	{"name":"chips",
+	"price":"$4.00"},
+
+	{"name":"Chips",
 	"type":"other",
-	"price":3},
+	"price":"$3.00"},
 	
-	{"name":"cheese",
-	"type":"dairy",
-	"price":3},
+	{"name":"Coffee",
+	"type":"drink",
+	"price":"$3.00"},
 	
-	{"name":"milk",
+	{"name":"Milk",
 	"type":"dairy",
-	"price":4}
-	];
+	"price":"$4.00"},
+	
+	{"name":"Pork",
+	"type":"meat",
+	"price":"$4.00"},
+		
+	{"name":"Potato",
+	"type":"vegetable",
+	"price":"$2.00"},
+		
+	{"name":"Soda",
+	"type":"drink",
+	"price":"$2.00"}
+	
+];
 	
 	for(var i = 0; i < products.length; i++){
 		document.getElementById("item" + (i+1).toString()).style.display = "block";
