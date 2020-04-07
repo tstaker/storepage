@@ -81,3 +81,7 @@ function remove(e) {
   var el = e.target;
   el.parentNode.remove();
 }
+
+function welcome() {
+	window.location.href = "../GUI/GUI.html"
+}
