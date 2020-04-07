@@ -58,6 +58,7 @@ function wishlist() {
   }
 }
 
+
 function pushTowishlist(x,list){
 	
     var thisItem = products[x-1];

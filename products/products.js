@@ -50,27 +50,8 @@ var products = [
 	
 ];
 var cart = [];
-function products(){
-	products.forEach(generateNameAndPrice);
-}
 
-function getType(x){
-	return products[x].type;
-}
-
-function addToCart(x){
-	var item = products[x];
-	cart.push({name: item.name, price: item.price});
-}
-function checkOut(){
-	
-}
 function moneyFormat(x){
-	var item = products[x-1];
-	var money = (item.price).toLocaleString('en-US', {style:'currency', currency: 'USD',});
-	return money;
-}
-function noArrayFormat(x){
 	var money = (x).toLocaleString('en-US', {style:'currency', currency: 'USD',});
 	return money;
 }
@@ -79,29 +60,44 @@ function generateNameAndPrice(x){
 	var item = products[x-1];
 	document.getElementById("itemName" + x).innerHTML = item.name;
 	document.getElementById("itemName" + x).style.fontSize = "xx-large";
-	var price = moneyFormat(x);
+	var price = moneyFormat(item.price);
 	document.getElementById("itemPrice" + x).innerHTML = price;
 	document.getElementById("itemPrice" + x).style.fontSize = "xx-large";
 }
 
 function checkOut(){
-	window.location.href = "./checkOut.html";
+  var x = document.getElementById("myCart");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } 
+  else {
+    x.style.display = "none";
+  }	
+}
+function addToCart(x, adding){
+		var item = products[x];
+		var itemToAdd = {
+				"name":"x",
+				"price":0
+		};
+		itemToAdd.name = item.name;
+		itemToAdd.price = item.price;
+		cart.push(itemToAdd);
 }
 
 
-
-function getCart(){
-	var itemDisplay = '';
-	var totalDisplay = '';
+function loadCart(){
+	var i;
 	var total = 0;
-	for(var i = 0;i<cart.length;++i){
+	var display = document.getElementById("myCart");
+	for(i = 0; i<cart.length;++i){
 		var item = cart[i];
-			itemDisplay += "<p>" + item.name + " - " + item.price + "</p>" + "<br>";
-			total += item.price;
-		}
-	totalDisplay = noArrayFormat(total);
-	itemDisplay += "Total: " + totalDisplay;
-	document.getElementById("cart").innerHTML = itemDisplay;
-	
+		var itemCost = moneyFormat(item.price);
+		var displayItem = "<p>" + item.name + '-' + itemCost + "</p><br>";
+		total += item.price;
+		display.innerHTML += displayItem;
+	}
+	var totalDisplay = "<p>Total: " +  moneyFormat(total) + "</p>";
+    display.innerHTML += totalDisplay;
 }
 
