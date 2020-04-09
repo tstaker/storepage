@@ -28,6 +28,19 @@
     </div>
 
     <div id="top-bar">  <!-- Utilities bar-->
+        <div class="dropdown">
+            <button class="dropbtn">Sort By</button>
+            <div class="dropdown-content">
+              <a href = "#" onclick="">Price Low to High</a>
+              <a href = "#" onclick="">Price High to Low</a>
+              <a href = "#" onclick="">Fruit</a>
+              <a href = "#" onclick="">Meat</a>
+              <a href = "#" onclick="">Dairy</a>
+              <a href = "#" onclick="">Vegetable</a>
+              <a href = "#" onclick="">Drink</a>
+              <a href = "#" onclick="">Other</a>
+            </div>
+          </div>
         <form action="#" onsubmit="return submitThis()" id="searchbox">
             <input type="text" size="25" name="searchtext" id="searchtext" placeholder="Search by type, price, or name">
             <input type="submit" name="submit" style="margin:5px" value="Search">
@@ -59,7 +72,7 @@
 -->
     <div id=content> <!-- Spaces for the items and their utilities, Add more/resize if you need-->
         <div class=item id=item1>
-			<img src="../products/images/apple.jpg" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+			<img src="../products/images/apple.jpg" id = "1" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
 			<p id="itemName1" style = "display:inline">[PUT NAME HERE]</p>
             <p id="itemPrice1" style = "display:inline">[PUT Price HERE]</p></br>
 			<button class="right-content left-float" onclick="addToCart(0, 1)">Add To Cart</button>
@@ -68,7 +81,7 @@
         </div>
 
         <div class=item id=item2>
-			<img src="../products/images/banana.png" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/> <!-- This one only has this image to show what it should look like when it has a proper item-->
+			<img src="../products/images/banana.png" id = "2" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/> <!-- This one only has this image to show what it should look like when it has a proper item-->
 			<p id="itemName2" style = "display:inline">[PUT NAME HERE]</p>
             <p id="itemPrice2" style = "display:inline">[PUT Price HERE]</p></br>
 			<button class="right-content left-float" onclick="addToCart(1, 1)">Add To Cart</button>
@@ -77,7 +90,7 @@
         </div>
 
         <div class=item id=item3>
-			<img src="../products/images/beef.png" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+			<img src="../products/images/beef.png" id = "3" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
 			<p id="itemName3" style = "display:inline"> [PUT NAME HERE] </p>
             <p id="itemPrice3" style = "display:inline"> [PUT Price HERE] </p></br>
 			<button class="right-content left-float" onclick="addToCart(2, 1)">Add To Cart</button>
@@ -86,7 +99,7 @@
         </div>
 
         <div class=item id=item4>
-            <img src="../products/images/celery.png" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+            <img src="../products/images/celery.png" id = "4" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
 			<p id="itemName4" style = "display:inline"> [PUT NAME HERE] </p>
             <p id="itemPrice4" style = "display:inline"> [PUT Price HERE] </p></br>
             <button class="right-content left-float" onclick="addToCart(3, 1)">Add To Cart</button>
@@ -95,7 +108,7 @@
         </div>
 
         <div class=item id=item5>
-            <img src="../products/images/cheese.png" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+            <img src="../products/images/cheese.png" id = "5" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
 			<p id="itemName5" style = "display:inline">[PUT NAME HERE]</p>
             <p id="itemPrice5" style = "display:inline"> [PUT Price HERE] </p></br>
             <button class="right-content left-float" onclick="addToCart(4, 1)">Add To Cart</button>
@@ -104,7 +117,7 @@
         </div>
 
         <div class=item id=item6>
-            <img src="../products/images/chicken.png" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+            <img src="../products/images/chicken.png" id = "6" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
 			<p id="itemName6" style = "display:inline"> [PUT NAME HERE] </p>
             <p id="itemPrice6" style = "display:inline"> [PUT Price HERE] </p></br>
             <button class="right-content left-float" onclick="addToCart(5, 1)">Add To Cart</button>
@@ -113,7 +126,7 @@
         </div>
 
         <div class=item id=item7>
-            <img src="../products/images/chips.png" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+            <img src="../products/images/chips.png" id = "7" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
 			<p id="itemName7" style = "display:inline"> [PUT NAME HERE] </p>
             <p id="itemPrice7" style = "display:inline"> [PUT Price HERE] </p></br>
             <button class="right-content left-float" onclick="addToCart(6, 1)">Add To Cart</button>
@@ -122,7 +135,7 @@
         </div>
 
         <div class=item id=item8>
-            <img src="../products/images/coffee.png" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+            <img src="../products/images/coffee.png" id = "8" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
 			<p id="itemName8" style = "display:inline"> [PUT NAME HERE] </p>
             <p id="itemPrice8" style = "display:inline"> [PUT Price HERE] </p></br>
             <button class="right-content left-float" onclick="addToCart(7, 1)">Add To Cart</button>
@@ -131,7 +144,7 @@
         </div>
 
         <div class=item id=item9>
-            <img src="../products/images/milk.png" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+            <img src="../products/images/milk.png" id = "9" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
 			<p id="itemName9" style = "display:inline">[PUT NAME HERE]</p>
             <p id="itemPrice9" style = "display:inline">[PUT Price HERE]</p></br>
             <button class="right-content left-float" onclick="addToCart(8, 1)">Add To Cart</button>
@@ -140,7 +153,7 @@
           </div>
 
           <div class=item id=item10>
-            <img src="../products/images/pork.png" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+            <img src="../products/images/pork.png" id = "10" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
 			<p id=itemName10 style = "display:inline"> [PUT NAME HERE] </p>
             <p id=itemPrice10 style = "display:inline"> [PUT Price HERE] </p></br>
             <button class="right-content left-float" onclick="addToCart(9, 1)">Add To Cart</button>
@@ -149,7 +162,7 @@
         </div>
 
         <div class=item id=item11>
-            <img src="../products/images/potato.png" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+            <img src="../products/images/potato.png" id = "11" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
 			<p id="itemName11" style = "display:inline">[PUT NAME HERE]</p>
             <p id="itemPrice11" style = "display:inline">[PUT Price HERE]</p></br>
             <button class="right-content left-float" onclick="addToCart(10, 1)">Add To Cart</button>
@@ -158,7 +171,7 @@
         </div>
 
         <div class=item id=item12>
-            <img src="../products/images/soda.png" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+            <img src="../products/images/soda.png" id = "12" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
 			<p id="itemName12" style = "display:inline"> [PUT NAME HERE] </p>
             <p id="itemPrice12" style = "display:inline"> [PUT Price HERE] </p></br>
             <button class="right-content left-float" onclick="addToCart(11, 1)">Add To Cart</button>
