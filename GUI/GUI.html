@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="style.css">
 	<script src="./search.js"></script>
 	<script src="../wishlist1/wishlist1.js"></script>
-	<script src="../products/products.js"></script>
+    <script src="../products/products.js"></script>
+    <script src="filter.js"></script>
 </head>
 
 <body>
@@ -31,14 +32,14 @@
         <div class="dropdown">
             <button class="dropbtn">Sort By</button>
             <div class="dropdown-content">
-              <a href = "#" onclick="">Price Low to High</a>
-              <a href = "#" onclick="">Price High to Low</a>
-              <a href = "#" onclick="">Fruit</a>
-              <a href = "#" onclick="">Meat</a>
-              <a href = "#" onclick="">Dairy</a>
-              <a href = "#" onclick="">Vegetable</a>
-              <a href = "#" onclick="">Drink</a>
-              <a href = "#" onclick="">Other</a>
+              <a href = "#" onclick="getChange(1)">Price Low to High</a>
+              <a href = "#" onclick="getChange(2)">Price High to Low</a>
+              <a href = "#" onclick="getChange(3)">Fruit</a>
+              <a href = "#" onclick="getChange(4)">Meat</a>
+              <a href = "#" onclick="getChange(5)">Dairy</a>
+              <a href = "#" onclick="getChange(6)">Vegetable</a>
+              <a href = "#" onclick="getChange(7)">Drink</a>
+              <a href = "#" onclick="getChange(8)">Other</a>
             </div>
           </div>
         <form action="#" onsubmit="return submitThis()" id="searchbox">
@@ -72,111 +73,111 @@
 -->
     <div id=content> <!-- Spaces for the items and their utilities, Add more/resize if you need-->
         <div class=item id=item1>
-			<img src="../products/images/apple.jpg" id = "1" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+			<img src="" id = "1" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
 			<p id="itemName1" style = "display:inline">[PUT NAME HERE]</p>
             <p id="itemPrice1" style = "display:inline">[PUT Price HERE]</p></br>
 			<button class="right-content left-float" onclick="addToCart(0, 1)">Add To Cart</button>
 			<button class="right-content right-float" onclick="pushTowishlist(1)">Add To Wishlist</button>
-			<script>generateNameAndPrice(1);</script>
+			<script>generateNameAndPrice(1,1);</script>
         </div>
 
         <div class=item id=item2>
-			<img src="../products/images/banana.png" id = "2" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/> <!-- This one only has this image to show what it should look like when it has a proper item-->
+			<img src="" id = "2" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/> <!-- This one only has this image to show what it should look like when it has a proper item-->
 			<p id="itemName2" style = "display:inline">[PUT NAME HERE]</p>
             <p id="itemPrice2" style = "display:inline">[PUT Price HERE]</p></br>
 			<button class="right-content left-float" onclick="addToCart(1, 1)">Add To Cart</button>
 			<button class="right-content right-float" onclick="pushTowishlist(2)">Add To Wishlist</button>
-			<script>generateNameAndPrice(2);</script>
+			<script>generateNameAndPrice(2,2);</script>
         </div>
 
         <div class=item id=item3>
-			<img src="../products/images/beef.png" id = "3" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+			<img src="" id = "3" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
 			<p id="itemName3" style = "display:inline"> [PUT NAME HERE] </p>
             <p id="itemPrice3" style = "display:inline"> [PUT Price HERE] </p></br>
 			<button class="right-content left-float" onclick="addToCart(2, 1)">Add To Cart</button>
 			<button class="right-content right-float" onclick="pushTowishlist(3)">Add To Wishlist</button>
-			<script>generateNameAndPrice(3);</script>
+			<script>generateNameAndPrice(3,3);</script>
         </div>
 
         <div class=item id=item4>
-            <img src="../products/images/celery.png" id = "4" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+            <img src="" id = "4" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
 			<p id="itemName4" style = "display:inline"> [PUT NAME HERE] </p>
             <p id="itemPrice4" style = "display:inline"> [PUT Price HERE] </p></br>
             <button class="right-content left-float" onclick="addToCart(3, 1)">Add To Cart</button>
             <button class="right-content right-float" onclick="pushTowishlist(4)">Add To Wishlist</button>
-            <script>generateNameAndPrice(4);</script>
+            <script>generateNameAndPrice(4,4);</script>
         </div>
 
         <div class=item id=item5>
-            <img src="../products/images/cheese.png" id = "5" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+            <img src="" id = "5" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
 			<p id="itemName5" style = "display:inline">[PUT NAME HERE]</p>
             <p id="itemPrice5" style = "display:inline"> [PUT Price HERE] </p></br>
             <button class="right-content left-float" onclick="addToCart(4, 1)">Add To Cart</button>
             <button class="right-content right-float" onclick="pushTowishlist(5)">Add To Wishlist</button>
-            <script>generateNameAndPrice(5);</script>
+            <script>generateNameAndPrice(5,5);</script>
         </div>
 
         <div class=item id=item6>
-            <img src="../products/images/chicken.png" id = "6" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+            <img src="" id = "6" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
 			<p id="itemName6" style = "display:inline"> [PUT NAME HERE] </p>
             <p id="itemPrice6" style = "display:inline"> [PUT Price HERE] </p></br>
             <button class="right-content left-float" onclick="addToCart(5, 1)">Add To Cart</button>
             <button class="right-content right-float" onclick="pushTowishlist(6)">Add To Wishlist</button>
-            <script>generateNameAndPrice(6);</script>
+            <script>generateNameAndPrice(6,6);</script>
         </div>
 
         <div class=item id=item7>
-            <img src="../products/images/chips.png" id = "7" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+            <img src="" id = "7" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
 			<p id="itemName7" style = "display:inline"> [PUT NAME HERE] </p>
             <p id="itemPrice7" style = "display:inline"> [PUT Price HERE] </p></br>
             <button class="right-content left-float" onclick="addToCart(6, 1)">Add To Cart</button>
             <button class="right-content right-float" onclick="pushTowishlist(7)">Add To Wishlist</button>
-            <script>generateNameAndPrice(7);</script>
+            <script>generateNameAndPrice(7,7);</script>
         </div>
 
         <div class=item id=item8>
-            <img src="../products/images/coffee.png" id = "8" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+            <img src="" id = "8" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
 			<p id="itemName8" style = "display:inline"> [PUT NAME HERE] </p>
             <p id="itemPrice8" style = "display:inline"> [PUT Price HERE] </p></br>
             <button class="right-content left-float" onclick="addToCart(7, 1)">Add To Cart</button>
             <button class="right-content right-float" onclick="pushTowishlist(8)">Add To Wishlist</button>
-            <script>generateNameAndPrice(8);</script>
+            <script>generateNameAndPrice(8,8);</script>
         </div>
 
         <div class=item id=item9>
-            <img src="../products/images/milk.png" id = "9" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+            <img src="" id = "9" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
 			<p id="itemName9" style = "display:inline">[PUT NAME HERE]</p>
             <p id="itemPrice9" style = "display:inline">[PUT Price HERE]</p></br>
             <button class="right-content left-float" onclick="addToCart(8, 1)">Add To Cart</button>
             <button class="right-content right-float" onclick="pushTowishlist(9)">Add To Wishlist</button>
-            <script>generateNameAndPrice(9);</script>
+            <script>generateNameAndPrice(9,9);</script>
           </div>
 
           <div class=item id=item10>
-            <img src="../products/images/pork.png" id = "10" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+            <img src="" id = "10" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
 			<p id=itemName10 style = "display:inline"> [PUT NAME HERE] </p>
             <p id=itemPrice10 style = "display:inline"> [PUT Price HERE] </p></br>
             <button class="right-content left-float" onclick="addToCart(9, 1)">Add To Cart</button>
             <button class="right-content right-float" onclick="pushTowishlist(10)">Add To Wishlist</button>
-            <script>generateNameAndPrice(10);</script>
+            <script>generateNameAndPrice(10,10);</script>
         </div>
 
         <div class=item id=item11>
-            <img src="../products/images/potato.png" id = "11" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+            <img src="" id = "11" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
 			<p id="itemName11" style = "display:inline">[PUT NAME HERE]</p>
             <p id="itemPrice11" style = "display:inline">[PUT Price HERE]</p></br>
             <button class="right-content left-float" onclick="addToCart(10, 1)">Add To Cart</button>
             <button class="right-content right-float" onclick="pushTowishlist(11)">Add To Wishlist</button>
-            <script>generateNameAndPrice(11);</script>
+            <script>generateNameAndPrice(11,11);</script>
         </div>
 
         <div class=item id=item12>
-            <img src="../products/images/soda.png" id = "12" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
+            <img src="" id = "12" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
 			<p id="itemName12" style = "display:inline"> [PUT NAME HERE] </p>
             <p id="itemPrice12" style = "display:inline"> [PUT Price HERE] </p></br>
             <button class="right-content left-float" onclick="addToCart(11, 1)">Add To Cart</button>
             <button class="right-content right-float" onclick="pushTowishlist(12)">Add To Wishlist</button>
-            <script>generateNameAndPrice(12);</script>
+            <script>generateNameAndPrice(12,12);</script>
           </div>	 
           
     </div>
