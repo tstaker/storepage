@@ -80,6 +80,7 @@ function pushTowishlist(x,list){
 	addBtn.type = "text";
 	addBtn.placeholder = "##";
 	addBtn.size = "2";
+	addBtn.maxLength = "2";
     li.appendChild(addBtn);
 	thisList.appendChild(li);
 
