@@ -55,6 +55,7 @@ var submitThis = function(){
 	
 	var item = document.getElementById("searchtext");
 	var filter = item.value.toLowerCase();
+	var count = 0;
 	for(var i = 0; i < products.length; i++){
 		//Hides all products that don't have the same type as the one being searched for
 		if(products[i].type != filter && products[i].name != filter && products[i].price != filter){
@@ -62,7 +63,11 @@ var submitThis = function(){
 		}
 		else{
 			document.getElementById("item" + (i+1).toString()).style.display = "block";
+			count++;
 		}
+	}
+	if(count === 0){
+	    alert("No results found");
 	}
 	//Must return false or won't work properly.
 	return false;
