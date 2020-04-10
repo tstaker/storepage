@@ -118,7 +118,9 @@ function home(){
 	"type":"dairy",
 	"price":4}
 	];
-	
+
+	getChange(3); /*un-does any filters the client may have currently applied*/
+
 	for(var i = 0; i < products.length; i++){
 		document.getElementById("item" + (i+1).toString()).style.display = "block";
 	}
