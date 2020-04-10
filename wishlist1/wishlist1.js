@@ -65,41 +65,35 @@ function wishlist() {
 
 function pushTowishlist(x,list){
 
-	var y = 1;
-
 	var thisItem = products[x-1];
 
     var thisName = document.getElementById("itemName"+x).innerText = thisItem.name;
 	var thisPrice = moneyFormat(thisItem.price);
 	document.getElementById("itemPrice"+x).innerText = thisPrice;
-    var thisTotal = y+' '+thisName+' '+thisPrice;
+    var thisTotal = thisName+' '+thisPrice;
     var li = document.createElement("li");
 	var thisProduct = document.createTextNode(thisTotal);
 	var thisList = document.getElementById('myList');
 	li.appendChild(thisProduct);
 
 	var addBtn = document.createElement("input");
-    addBtn.type = "button";
-    addBtn.value = "Add";
-    addBtn.onclick = increment(y);
+	addBtn.type = "text";
+	addBtn.placeholder = "##";
+	addBtn.size = "2";
     li.appendChild(addBtn);
-	document.getElementById("myList").appendChild(li);
+	thisList.appendChild(li);
 
     var removeBtn = document.createElement("input");
     removeBtn.type = "button";
     removeBtn.value = "Remove";
     removeBtn.onclick = remove;
     li.appendChild(removeBtn);
-	document.getElementById("myList").appendChild(li);
+	thisList.appendChild(li);
 }
 
 function remove(e) {
   var el = e.target;
   el.parentNode.remove();
-}
-
-function increment(z) {
-	z = z + 1;
 }
 
 function welcome() {
