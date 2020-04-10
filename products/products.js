@@ -1,4 +1,3 @@
-
 var products = [
 	{"name":"Apple",
 	"type":"fruit",
@@ -56,13 +55,14 @@ function moneyFormat(x){
 	return money;
 }
 
-function generateNameAndPrice(x){
+function generateNameAndPrice(cell,x){ /*cell is src, x is destination, the change made sort by a lot easier*/
 	var item = products[x-1];
-	document.getElementById("itemName" + x).innerHTML = item.name;
-	document.getElementById("itemName" + x).style.fontSize = "xx-large";
+	document.getElementById("itemName" + cell).innerHTML = item.name;
+	document.getElementById("itemName" + cell).style.fontSize = "xx-large";
 	var price = moneyFormat(item.price);
-	document.getElementById("itemPrice" + x).innerHTML = price;
-	document.getElementById("itemPrice" + x).style.fontSize = "xx-large";
+	document.getElementById("itemPrice" + cell).innerHTML = price;
+	document.getElementById("itemPrice" + cell).style.fontSize = "xx-large";
+	document.getElementById(cell).src=imgSrcList[x - 1];
 }
 
 function checkOut(){
