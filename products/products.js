@@ -55,6 +55,21 @@ function moneyFormat(x){
 	return money;
 }
 
+var imgSrcList = [
+	"../products/images/apple.jpg",
+	"../products/images/banana.png",
+	"../products/images/beef.png",
+	"../products/images/celery.png",
+	"../products/images/cheese.png",
+	"../products/images/chicken.png",
+	"../products/images/chips.png",
+	"../products/images/coffee.png",
+	"../products/images/milk.png",
+	"../products/images/pork.png",
+	"../products/images/potato.png",
+	"../products/images/soda.png"
+];
+
 function generateNameAndPrice(cell,x){ /*cell is src, x is destination, the change made sort by a lot easier*/
 	var item = products[x-1];
 	document.getElementById("itemName" + cell).innerHTML = item.name;
