@@ -52,3 +52,11 @@ body {
      text-align: center;
      background-color: orange;
 }
+
+#aboutMePage {
+  display: none;
+  text-align: center;
+  font-size: 32px;
+  background-color: rgb(154, 173, 173);
+  border: 2px solid black;
+}
