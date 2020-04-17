@@ -100,3 +100,15 @@ function remove(e) {
 function welcome() {
 	window.location.href = "../GUI/GUI.html"
 }
+function welcomeBack() {
+	window.location.href = "../welcomePage/welcome.html"
+}
+
+function aboutMe() {
+	var x = document.getElementById("aboutMePage");
+	if (x.style.display === "none") {
+	  x.style.display = "block";
+	} else {
+	  x.style.display = "none";
+	}
+  }
