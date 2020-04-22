@@ -89,14 +89,20 @@ function checkOut(){
     x.style.display = "none";
   }	
 }
-function addToCart(x, adding){
+function addToCart(x){
 		var item = products[x];
+		var quantity = document.getElementById("quantity"+x).value;
 		var itemToAdd = {
 				"name":"x",
 				"price":0
 		};
 		itemToAdd.name = item.name;
-		itemToAdd.price = item.price;
+		if(quantity == ""){
+			itemToAdd.price = item.price;
+		}
+		else{
+			itemToAdd.price = item.price * quantity;
+		}
 		cart.push(itemToAdd);
 }
 

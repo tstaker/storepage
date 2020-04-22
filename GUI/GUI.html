@@ -47,7 +47,7 @@
             <input type="submit" name="submit" style="margin:5px" value="Search">
         </form>
 		<button onclick="home()" style="margin:5px">Home</button>
-        <button onclick="checkOut()" style="margin:5px">Checkout</button>
+        <button onclick="checkOut()" style="margin:5px">Cart</button>
         <button onclick="wishlist()" style="margin:5px">Wishlist</button>
     </div>
 
@@ -78,8 +78,9 @@
 			<img src="" id = "1" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
 			<p id="itemName1" style = "display:inline">[PUT NAME HERE]</p>
             <p id="itemPrice1" style = "display:inline">[PUT Price HERE]</p></br>
-			<button class="right-content left-float" onclick="addToCart(0, 1)">Add To Cart</button>
-			<button class="right-content right-float" onclick="pushTowishlist(1)">Add To Wishlist</button>
+			<button class="right-content left-float" onclick="addToCart(0)">Add To Cart</button>
+            <button class="right-content right-float" onclick="pushTowishlist(1)">Add To Wishlist</button>
+            Quantity(max 5)<input type = "number" id = "quantity0" min = "1" max = "5">
 			<script>generateNameAndPrice(1,1);</script>
         </div>
 
@@ -87,8 +88,9 @@
 			<img src="" id = "2" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/> <!-- This one only has this image to show what it should look like when it has a proper item-->
 			<p id="itemName2" style = "display:inline">[PUT NAME HERE]</p>
             <p id="itemPrice2" style = "display:inline">[PUT Price HERE]</p></br>
-			<button class="right-content left-float" onclick="addToCart(1, 1)">Add To Cart</button>
-			<button class="right-content right-float" onclick="pushTowishlist(2)">Add To Wishlist</button>
+			<button class="right-content left-float" onclick="addToCart(1)">Add To Cart</button>
+            <button class="right-content right-float" onclick="pushTowishlist(2)">Add To Wishlist</button>
+            Quantity(max 5)<input type = "number" id = "quantity1" min = "1" max = "5">
 			<script>generateNameAndPrice(2,2);</script>
         </div>
 
@@ -96,8 +98,9 @@
 			<img src="" id = "3" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
 			<p id="itemName3" style = "display:inline"> [PUT NAME HERE] </p>
             <p id="itemPrice3" style = "display:inline"> [PUT Price HERE] </p></br>
-			<button class="right-content left-float" onclick="addToCart(2, 1)">Add To Cart</button>
-			<button class="right-content right-float" onclick="pushTowishlist(3)">Add To Wishlist</button>
+			<button class="right-content left-float" onclick="addToCart(2)">Add To Cart</button>
+            <button class="right-content right-float" onclick="pushTowishlist(3)">Add To Wishlist</button>
+            Quantity(max 5)<input type = "number" id = "quantity2" min = "1" max = "5">
 			<script>generateNameAndPrice(3,3);</script>
         </div>
 
@@ -105,8 +108,9 @@
             <img src="" id = "4" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
 			<p id="itemName4" style = "display:inline"> [PUT NAME HERE] </p>
             <p id="itemPrice4" style = "display:inline"> [PUT Price HERE] </p></br>
-            <button class="right-content left-float" onclick="addToCart(3, 1)">Add To Cart</button>
+            <button class="right-content left-float" onclick="addToCart(3)">Add To Cart</button>
             <button class="right-content right-float" onclick="pushTowishlist(4)">Add To Wishlist</button>
+            Quantity(max 5)<input type = "number" id = "quantity3" min = "1" max = "5">
             <script>generateNameAndPrice(4,4);</script>
         </div>
 
@@ -114,8 +118,9 @@
             <img src="" id = "5" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
 			<p id="itemName5" style = "display:inline">[PUT NAME HERE]</p>
             <p id="itemPrice5" style = "display:inline"> [PUT Price HERE] </p></br>
-            <button class="right-content left-float" onclick="addToCart(4, 1)">Add To Cart</button>
+            <button class="right-content left-float" onclick="addToCart(4)">Add To Cart</button>
             <button class="right-content right-float" onclick="pushTowishlist(5)">Add To Wishlist</button>
+            Quantity(max 5)<input type = "number" id = "quantity4" min = "1" max = "5">
             <script>generateNameAndPrice(5,5);</script>
         </div>
 
@@ -123,8 +128,9 @@
             <img src="" id = "6" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
 			<p id="itemName6" style = "display:inline"> [PUT NAME HERE] </p>
             <p id="itemPrice6" style = "display:inline"> [PUT Price HERE] </p></br>
-            <button class="right-content left-float" onclick="addToCart(5, 1)">Add To Cart</button>
+            <button class="right-content left-float" onclick="addToCart(5)">Add To Cart</button>
             <button class="right-content right-float" onclick="pushTowishlist(6)">Add To Wishlist</button>
+            Quantity(max 5)<input type = "number" id = "quantity5" min = "1" max = "5">
             <script>generateNameAndPrice(6,6);</script>
         </div>
 
@@ -134,6 +140,7 @@
             <p id="itemPrice7" style = "display:inline"> [PUT Price HERE] </p></br>
             <button class="right-content left-float" onclick="addToCart(6, 1)">Add To Cart</button>
             <button class="right-content right-float" onclick="pushTowishlist(7)">Add To Wishlist</button>
+            Quantity(max 5)<input type = "number" id = "quantity6" min = "1" max = "5">
             <script>generateNameAndPrice(7,7);</script>
         </div>
 
@@ -141,8 +148,9 @@
             <img src="" id = "8" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
 			<p id="itemName8" style = "display:inline"> [PUT NAME HERE] </p>
             <p id="itemPrice8" style = "display:inline"> [PUT Price HERE] </p></br>
-            <button class="right-content left-float" onclick="addToCart(7, 1)">Add To Cart</button>
+            <button class="right-content left-float" onclick="addToCart(7)">Add To Cart</button>
             <button class="right-content right-float" onclick="pushTowishlist(8)">Add To Wishlist</button>
+            Quantity(max 5)<input type = "number" id = "quantity7" min = "1" max = "5">
             <script>generateNameAndPrice(8,8);</script>
         </div>
 
@@ -150,8 +158,9 @@
             <img src="" id = "9" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
 			<p id="itemName9" style = "display:inline">[PUT NAME HERE]</p>
             <p id="itemPrice9" style = "display:inline">[PUT Price HERE]</p></br>
-            <button class="right-content left-float" onclick="addToCart(8, 1)">Add To Cart</button>
+            <button class="right-content left-float" onclick="addToCart(8)">Add To Cart</button>
             <button class="right-content right-float" onclick="pushTowishlist(9)">Add To Wishlist</button>
+            Quantity(max 5)<input type = "number" id = "quantity8" min = "1" max = "5">
             <script>generateNameAndPrice(9,9);</script>
           </div>
 
@@ -159,8 +168,9 @@
             <img src="" id = "10" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
 			<p id=itemName10 style = "display:inline"> [PUT NAME HERE] </p>
             <p id=itemPrice10 style = "display:inline"> [PUT Price HERE] </p></br>
-            <button class="right-content left-float" onclick="addToCart(9, 1)">Add To Cart</button>
+            <button class="right-content left-float" onclick="addToCart(9">Add To Cart</button>
             <button class="right-content right-float" onclick="pushTowishlist(10)">Add To Wishlist</button>
+            Quantity(max 5)<input type = "number" id = "quantity9" min = "1" max = "5">
             <script>generateNameAndPrice(10,10);</script>
         </div>
 
@@ -168,8 +178,9 @@
             <img src="" id = "11" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
 			<p id="itemName11" style = "display:inline">[PUT NAME HERE]</p>
             <p id="itemPrice11" style = "display:inline">[PUT Price HERE]</p></br>
-            <button class="right-content left-float" onclick="addToCart(10, 1)">Add To Cart</button>
+            <button class="right-content left-float" onclick="addToCart(10)">Add To Cart</button>
             <button class="right-content right-float" onclick="pushTowishlist(11)">Add To Wishlist</button>
+            Quantity(max 5)<input type = "number" id = "quantity10" min = "1" max = "5">
             <script>generateNameAndPrice(11,11);</script>
         </div>
 
@@ -177,8 +188,9 @@
             <img src="" id = "12" alt="[SPACE SAVED FOR IMAGE]" class="imageView"/>
 			<p id="itemName12" style = "display:inline"> [PUT NAME HERE] </p>
             <p id="itemPrice12" style = "display:inline"> [PUT Price HERE] </p></br>
-            <button class="right-content left-float" onclick="addToCart(11, 1)">Add To Cart</button>
+            <button class="right-content left-float" onclick="addToCart(11)">Add To Cart</button>
             <button class="right-content right-float" onclick="pushTowishlist(12)">Add To Wishlist</button>
+            Quantity(max 5)<input type = "number" id = "quantity11" min = "1" max = "5">
             <script>generateNameAndPrice(12,12);</script>
           </div>	 
           
