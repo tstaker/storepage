@@ -83,42 +83,59 @@ function generateNameAndPrice(cell,x){ /*cell is src, x is destination, the chan
 function checkOut(){
   var x = document.getElementById("myCart");
   if (x.style.display === "none") {
-    x.style.display = "block";
+	x.style.display = "block";
+	var i;
+	var total = 0;
+	var display = document.getElementById("myCart");
+	display.innerHTML = "";
+	for(i = 0; i<cart.length;++i){
+		var item = cart[i];
+		var itemCost = moneyFormat(item.price);
+		var displayItem = "<p>" + item.name + '-' + itemCost + " X " + item.quantity + "</p><br>";
+		total += item.price * item.quantity;
+		display.innerHTML += displayItem;
+	}
+	var totalDisplay = "<p>Total: " +  moneyFormat(total) + "</p>";
+    display.innerHTML += totalDisplay;
   } 
   else {
     x.style.display = "none";
   }	
 }
 function addToCart(x){
-		var item = products[x];
-		var quantity = document.getElementById("quantity"+x).value;
-		var itemToAdd = {
-				"name":"x",
-				"price":0
-		};
-		itemToAdd.name = item.name;
-		if(quantity == ""){
-			itemToAdd.price = item.price;
-		}
-		else{
-			itemToAdd.price = item.price * quantity;
-		}
-		cart.push(itemToAdd);
-}
-
-
-function loadCart(){
-	var i;
-	var total = 0;
-	var display = document.getElementById("myCart");
-	for(i = 0; i<cart.length;++i){
-		var item = cart[i];
-		var itemCost = moneyFormat(item.price);
-		var displayItem = "<p>" + item.name + '-' + itemCost + "</p><br>";
-		total += item.price;
-		display.innerHTML += displayItem;
+	var item = products[x];
+	var quantity = parseInt(document.getElementById("quantity"+x).value);
+	var itemToAdd = {
+			"name":"x",
+			"price":0,
+			"quantity":0
+	};
+	itemToAdd.name = item.name;
+	if(checkCart(item.name, quantity) == true){
+		return;
 	}
-	var totalDisplay = "<p>Total: " +  moneyFormat(total) + "</p>";
-    display.innerHTML += totalDisplay;
+	itemToAdd.price = item.price;
+	if(Number.isNaN(quantity)){
+		itemToAdd.quantity = 1;
+	}
+	else{
+		itemToAdd.quantity = quantity;
+	}
+	cart.push(itemToAdd);
 }
+function checkCart(name, q){
+	if(Number.isNaN(q)){
+		q = 1;
+	}
+	var i;
+	for(i = 0; i < cart.length;++i){
+		var item = cart[i];
+		if(item.name == name){
+			item.quantity += q;
+			return true;
+		}
+	}
+	return false;
+}
+
 
