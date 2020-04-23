@@ -103,10 +103,11 @@ function checkOut(){
   }	
 }
 function addToCart(x){
-	var item = products[x];
-	var quantity = parseInt(document.getElementById("quantity"+x).value);
+	var index = getIndexCart(x);
+	var item = products[index];
+	var quantity = parseInt(document.getElementById("quantity"+index).value);
 	var itemToAdd = {
-			"name":"x",
+			"name":"index",
 			"price":0,
 			"quantity":0
 	};
