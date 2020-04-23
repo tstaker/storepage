@@ -56,7 +56,7 @@ function moneyFormat(x){
 }
 
 var imgSrcList = [
-	"../products/images/apple.jpg",
+	"../products/images/apple.png",
 	"../products/images/banana.png",
 	"../products/images/beef.png",
 	"../products/images/celery.png",
@@ -78,6 +78,7 @@ function generateNameAndPrice(cell,x){ /*cell is src, x is destination, the chan
 	document.getElementById("itemPrice" + cell).innerHTML = price;
 	document.getElementById("itemPrice" + cell).style.fontSize = "xx-large";
 	document.getElementById(cell).src=imgSrcList[x - 1];
+	
 }
 
 function checkOut(){
@@ -105,7 +106,7 @@ function checkOut(){
 function addToCart(x){
 	var index = getIndexCart(x);
 	var item = products[index];
-	var quantity = parseInt(document.getElementById("quantity"+index).value);
+	var quantity = parseInt(document.getElementById("quantity"+x).value);
 	var itemToAdd = {
 			"name":"index",
 			"price":0,
