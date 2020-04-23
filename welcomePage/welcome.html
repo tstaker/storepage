@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="welcome.css">
     <script src="../wishlist1/wishlist1.js"></script>
+    <script src="../wishlist1/login.js"></script>
 </head>
 
 <body>
@@ -24,8 +25,63 @@
             <img src="../GUI/cart.png" id="cart2">
         </div>
   </div>
+  <br>
+  <div id="banner">
     <button onclick="welcome()">Start Shopping</button>
     <button onclick="aboutMe()">About Me</button>
+    <!-- <button onclick="document.getElementById('login').style.display='block'">Login</button> -->
+    <button onclick="signUp()">Sign Up or Sign In</button>
+  </div>
+
+<!-- <div id="login" class="modal">
+  
+  <form class="modal-content animate" method="post">
+    <div class="loginInfobox">
+      <span onclick="document.getElementById('login').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+
+    <div class="loginInfo">
+      <label for="name"><b>Username</b></label>
+      <input id="username1" type="text" placeholder="Enter Username" name="name" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input id="password1" type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button onclick="loginCheck()">Login</button>
+    </div>
+
+    <div class="loginInfo" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('login').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+</div>
+
+<div id="register" class="registration">
+  
+  <form class="modal-content animate" method="post">
+    <div class="loginInfobox">
+      <span onclick="document.getElementById('register').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+
+    <div class="loginInfo">
+      <label for="name"><b>Username</b></label>
+      <input id="username2" type="text" placeholder="Enter Username" name="name2" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input id="password2" type="password" placeholder="Enter Password" name="psw1" required>
+
+      <label for="psw"><b>Confirm Password</b></label>
+      <input id="password3" type="password" placeholder="Enter Password" name="psw2" required>
+      
+      <button onclick="registerCheck()">Register</button>
+    </div>
+
+    <div class="registration" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('register').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+</div> -->
+
 </div>
 
 <div id="aboutMePage">
