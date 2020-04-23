@@ -64,12 +64,11 @@ function wishlist() {
 }
 
 function pushTowishlist(x,list){
-
-	var thisItem = products[x-1];
-
-    var thisName = document.getElementById("itemName"+x).innerText = thisItem.name;
+	var index = getIndexWishList(x - 1); //Added filter compatibility 
+	var thisItem = products[index-1];
+    var thisName = document.getElementById("itemName"+index).innerText = thisItem.name;
 	var thisPrice = moneyFormat(thisItem.price);
-	document.getElementById("itemPrice"+x).innerText = thisPrice;
+	document.getElementById("itemPrice"+index).innerText = thisPrice;
     var thisTotal = thisName+' '+thisPrice;
     var li = document.createElement("li");
 	var thisProduct = document.createTextNode(thisTotal);
