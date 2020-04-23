@@ -1,6 +1,11 @@
 /*This code is gross, but a for loop didnt work for whatever reason, i'll work on it*/
+var sorted; 
+
 function getChange(list){
-    if(list == 1){ /*Price low to high*/
+	var indexArr = [];
+	sorted = list;
+	if(list == 1){ /*Price low to high*/
+		indexArr = [2,1,11,12,4,5,7,8,6,9,10,3];
 		generateNameAndPrice(1,2);
 		generateNameAndPrice(2,1);
 		generateNameAndPrice(3,11);
@@ -14,7 +19,8 @@ function getChange(list){
 		generateNameAndPrice(11,10);
 		generateNameAndPrice(12,3);
     }
-    else if(list == 2){ /*price high to low*/
+	else if(list == 2){ /*price high to low*/
+		indexArr = [3,10,9,6,8,7,5,4,12,11,1,2];
 		generateNameAndPrice(1,3);
 		generateNameAndPrice(2,10);
 		generateNameAndPrice(3,9);
@@ -28,7 +34,8 @@ function getChange(list){
 		generateNameAndPrice(11,1);
 		generateNameAndPrice(12,2);
     }
-    else if(list == 3){/*fruit first*/
+	else if(list == 3){/*fruit first*/
+		indexArr = [1,2,3,4,5,6,7,8,9,10,11,12];
 		generateNameAndPrice(1,1);
 		generateNameAndPrice(2,2);
 		generateNameAndPrice(3,3);
@@ -43,6 +50,7 @@ function getChange(list){
 		generateNameAndPrice(12,12);
     }
 	else if(list == 4){ /*Meat first*/
+		indexArr = [3,6,10,1,2,4,5,7,8,9,11,12];
 		generateNameAndPrice(1,3);
 		generateNameAndPrice(2,6);
 		generateNameAndPrice(3,10);
@@ -56,7 +64,8 @@ function getChange(list){
 		generateNameAndPrice(11,11);
 		generateNameAndPrice(12,12);
     }
-    else if(list == 5){ /*Dairy first*/
+	else if(list == 5){ /*Dairy first*/
+		indexArr = [5,9,1,2,3,4,6,7,8,10,11,12];
 		generateNameAndPrice(1,5);
 		generateNameAndPrice(2,9);
 		generateNameAndPrice(3,1);
@@ -71,7 +80,7 @@ function getChange(list){
 		generateNameAndPrice(12,12);
     }
 	else if(list == 6){ /*Vegetables first*/
-		var veg = [3,10,0,1,2,4,5,6,7,8,9,11];
+		var indexArr = [4,11,1,2,3,5,6,7,8,9,10,12];
 		generateNameAndPrice(1,4);
 		generateNameAndPrice(2,11);
 		generateNameAndPrice(3,1);
@@ -86,6 +95,7 @@ function getChange(list){
 		generateNameAndPrice(12,12);
     }
 	else if(list == 7){	/*Drinks first*/
+		indexArr = [8,12,9,2,3,4,5,6,7,1,10,11];
 		generateNameAndPrice(1,8);
 		generateNameAndPrice(2,12);
 		generateNameAndPrice(3,9);
@@ -100,7 +110,7 @@ function getChange(list){
 		generateNameAndPrice(12,11);
     }
 	else if(list == 8){/*"Other" first*/
-	var other = [6,0,1,2,3,4,5,7,8,9,10,11];
+	    indexArr = [7,1,2,3,4,5,6,8,9,10,11,12];
 		generateNameAndPrice(1,7);
 		generateNameAndPrice(2,1);
 		generateNameAndPrice(3,2);
@@ -113,5 +123,13 @@ function getChange(list){
 		generateNameAndPrice(10,10);
 		generateNameAndPrice(11,11);
 		generateNameAndPrice(12,12);
-    }
+	}
+	return indexArr
+}
+
+function getIndexCart(index) {
+	var defaultArr = [1,2,3,4,5,6,7,8,9,10,11,12];
+	indexA = getChange(sorted);
+	if(sorted != 0) return (indexA[index] - 1);
+	else return (defaultArr[index] - 1);
 }
