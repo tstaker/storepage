@@ -56,7 +56,7 @@ function moneyFormat(x){
 }
 
 var imgSrcList = [
-	"../products/images/apple.png",
+	"../products/images/apple.jpg",
 	"../products/images/banana.png",
 	"../products/images/beef.png",
 	"../products/images/celery.png",
