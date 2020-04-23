@@ -7,8 +7,8 @@ function setQuantity(){
 }
 
 //changes the representation of the list based off the selection.
-function getChange(list){ /*This code is gross, but a for loop didnt work for whatever reason, i'll work on it*/
-	setQuantity();
+function getChange(list,resetQuantity){ /*This code is gross, but a for loop didnt work for whatever reason, i'll work on it*/
+	if(resetQuantity) setQuantity();
 	var indexArr = [];
 	sorted = list;
 	if(list == 1){ /*Price low to high*/
@@ -138,7 +138,7 @@ function getChange(list){ /*This code is gross, but a for loop didnt work for wh
 function getIndexCart(index) {
 	var defaultArr = [1,2,3,4,5,6,7,8,9,10,11,12];
 	if(sorted) {
-		indexA = getChange(sorted);
+		indexA = getChange(sorted,0);
 		return (indexA[index] - 1);
 	}
 	else return (defaultArr[index] - 1);
@@ -147,7 +147,7 @@ function getIndexCart(index) {
 function getIndexWishList(index) {
 	var defaultArr = [1,2,3,4,5,6,7,8,9,10,11,12];
 	if(sorted) {
-		indexA = getChange(sorted);
+		indexA = getChange(sorted,0);
 		return (indexA[index]);
 	}
 	else return (defaultArr[index]);
