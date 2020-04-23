@@ -1,7 +1,14 @@
-/*This code is gross, but a for loop didnt work for whatever reason, i'll work on it*/
+//Global
 var sorted; 
 
-function getChange(list){
+//Sets all quantities to 1, so quantity  on an old selection doesnt effect the new selection
+function setQuantity(){
+	for(var i = 0; i < 12; i++) document.getElementById("quantity"+i).value = 1;
+}
+
+//changes the representation of the list based off the selection.
+function getChange(list){ /*This code is gross, but a for loop didnt work for whatever reason, i'll work on it*/
+	setQuantity();
 	var indexArr = [];
 	sorted = list;
 	if(list == 1){ /*Price low to high*/
@@ -80,7 +87,7 @@ function getChange(list){
 		generateNameAndPrice(12,12);
     }
 	else if(list == 6){ /*Vegetables first*/
-		var indexArr = [4,11,1,2,3,5,6,7,8,9,10,12];
+		indexArr = [4,11,1,2,3,5,6,7,8,9,10,12];
 		generateNameAndPrice(1,4);
 		generateNameAndPrice(2,11);
 		generateNameAndPrice(3,1);
