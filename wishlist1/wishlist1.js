@@ -78,6 +78,7 @@ function pushTowishlist(x,list){
 	var addBtn = document.createElement("input");
 	addBtn.type = "text";
 	addBtn.placeholder = "##";
+	addBtn.value = document.getElementById("quantity"+(x-1)).value;
 	addBtn.size = "2";
 	addBtn.maxLength = "2";
     li.appendChild(addBtn);
