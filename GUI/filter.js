@@ -127,6 +127,7 @@ function getChange(list){
 	return indexArr
 }
 
+/*These functions return the correct index in the list for the current filter on the list*/
 function getIndexCart(index) {
 	var defaultArr = [1,2,3,4,5,6,7,8,9,10,11,12];
 	indexA = getChange(sorted);
