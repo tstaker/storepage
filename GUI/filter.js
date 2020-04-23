@@ -130,14 +130,18 @@ function getChange(list){
 /*These functions return the correct index in the list for the current filter on the list*/
 function getIndexCart(index) {
 	var defaultArr = [1,2,3,4,5,6,7,8,9,10,11,12];
-	indexA = getChange(sorted);
-	if(sorted != 0) return (indexA[index] - 1);
+	if(sorted) {
+		indexA = getChange(sorted);
+		return (indexA[index] - 1);
+	}
 	else return (defaultArr[index] - 1);
 }
 
 function getIndexWishList(index) {
 	var defaultArr = [1,2,3,4,5,6,7,8,9,10,11,12];
-	indexA = getChange(sorted);
-	if(sorted != 0) return (indexA[index]);
+	if(sorted) {
+		indexA = getChange(sorted);
+		return (indexA[index]);
+	}
 	else return (defaultArr[index]);
 }
