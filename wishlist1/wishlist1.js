@@ -90,6 +90,7 @@ function pushTowishlist(x,list){
     removeBtn.onclick = remove;
     li.appendChild(removeBtn);
 	thisList.appendChild(li);
+	fixCellData(); //Fixes last issue with wishList compatibility, where text and prices would change on cells
 }
 
 function remove(e) {
