@@ -6,6 +6,12 @@ function setQuantity(){
 	for(var i = 0; i < 12; i++) document.getElementById("quantity"+i).value = 1;
 }
 
+//Fixes cells that may be messed up after adding to wishlist while using the filter.
+function fixCellData(){
+	if(sorted) getChange(sorted,0);
+	else getChange(3,0);
+}
+
 //changes the representation of the list based off the selection.
 function getChange(list,resetQuantity){ /*This code is gross, but a for loop didnt work for whatever reason, i'll work on it*/
 	if(resetQuantity) setQuantity();
