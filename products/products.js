@@ -50,6 +50,8 @@ var products = [
 ];
 var cart = [];
 
+var totalCost = 0;
+
 function moneyFormat(x){
 	var money = (x).toLocaleString('en-US', {style:'currency', currency: 'USD',});
 	return money;
@@ -81,7 +83,7 @@ function generateNameAndPrice(cell,x){ /*cell is src, x is destination, the chan
 	
 }
 
-function checkOut(){
+function getCart(){
   var x = document.getElementById("myCart");
   if (x.style.display === "none") {
 	x.style.display = "block";
@@ -96,7 +98,9 @@ function checkOut(){
 		total += item.price * item.quantity;
 		display.innerHTML += displayItem;
 	}
+	totalCost = total;
 	var totalDisplay = "<p>Total: " +  moneyFormat(total) + "</p>";
+	totalDisplay += "<button onclick = checkOut()>Check Out</button>"
     display.innerHTML += totalDisplay;
   } 
   else {
@@ -139,5 +143,9 @@ function checkCart(name, q){
 	}
 	return false;
 }
-
+function checkOut(){
+	var totalMoney = moneyFormat(totalCost)
+	localStorage.setItem("total", totalMoney);
+	window.location.href = "./checkout.html";
+}
 

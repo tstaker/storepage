@@ -5,12 +5,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaStop n’ Shop - checkout</title>
+    <title>JavaStop n’ Shop - Checkout</title>
     <link rel="stylesheet" href="style.css">
     <style> body{background-color: #8db3b6;} </style>
-    <script src="../products/products.js"></script>
+    <script src="./checkOut.js"></script>
 </head>
 
-<body id = "cart">
-	<script>getCart();</script>
+<body>
+	<div id = "cart">
+	<p style = "font-size:25px">Your Total Today is: </p>
+	<script>printTotal();</script>
+	</div>
+	<p style = "font-size:25px"> How would you like to pay?</p>
+	<form>
+		<select id = "cardType">
+		<option value = "select">select</option>
+		<option value = "credit">Credit</option>
+		<option value = "debit">Debit</option>
+		</select>
+		
+		<p style = "font-size:25px">Please enter your card number:
+		<input type = "text" id = "cardNum" placeholder = "0000-0000-0000-0000"><br>
+		
+		</p>
+		<button onclick = "verify()">Submit</button>
+		
+	</form>
 </body>
