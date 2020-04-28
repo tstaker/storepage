@@ -1,4 +1,3 @@
-export var displayed = "block";
 export var item1Shown = true;
 
 export var submitThis = function(searched){
