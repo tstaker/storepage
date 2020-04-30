@@ -108,7 +108,12 @@ function getCart(){
   }	
 }
 function addToCart(x){
-	var index = getIndexCart(x);
+	if(searched == 1){
+		searched = 0;
+		var index = getIndexCart(x);
+		searched = 1;
+	} 
+	else var index = getIndexCart(x);
 	var item = products[index];
 	var quantity = parseInt(document.getElementById("quantity"+x).value);
 	var itemToAdd = {
