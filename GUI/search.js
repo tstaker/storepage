@@ -1,8 +1,10 @@
 //Put the list inside this function for simplicity.
 //This function requires that the items in the products
 //list are in exactly the same order as the gui cells
+var searched = 0; 
 
 var submitThis = function(){
+	getChange(3); /*un-does any filters the client may have currently applied*/
 	var products = [
 	{"name":"apple",
 	"type":"fruit",
@@ -68,8 +70,14 @@ var submitThis = function(){
 		}
 	}
 	if(count === 0){
-	    alert("No results found");
+		searched = 0;
+		alert("No results found");
+		home();
 	}
+	else{
+		searched = 1;
+	} 
+	
 	
 	//Must return false or won't work properly.
 	return false;
@@ -126,10 +134,15 @@ function home(){
 	"price":2}
 	
 ];
-
+	searched = 0;
 	getChange(3); /*un-does any filters the client may have currently applied*/
+
 
 	for(var i = 0; i < products.length; i++){
 		document.getElementById("item" + (i+1).toString()).style.display = "block";
 	}
+}
+
+function getSearch(){
+	return searched;
 }
