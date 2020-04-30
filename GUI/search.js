@@ -78,7 +78,14 @@ var submitThis = function(){
 		searched = 1;
 	} 
 	
-	
+	document.getElementById("htl").style.display = "none";
+	document.getElementById("lth").style.display = "none";
+	document.getElementById("fruit").style.display = "none";
+	document.getElementById("meat").style.display = "none";
+	document.getElementById("dairy").style.display = "none";
+	document.getElementById("vegetable").style.display = "none";
+	document.getElementById("drink").style.display = "none";
+	document.getElementById("other").style.display = "none";
 	//Must return false or won't work properly.
 	return false;
 }
@@ -136,7 +143,14 @@ function home(){
 ];
 	searched = 0;
 	getChange(3); /*un-does any filters the client may have currently applied*/
-
+	document.getElementById("htl").style.display = "block";
+	document.getElementById("lth").style.display = "block";
+	document.getElementById("fruit").style.display = "block";
+	document.getElementById("meat").style.display = "block";
+	document.getElementById("dairy").style.display = "block";
+	document.getElementById("vegetable").style.display = "block";
+	document.getElementById("drink").style.display = "block";
+	document.getElementById("other").style.display = "block";
 
 	for(var i = 0; i < products.length; i++){
 		document.getElementById("item" + (i+1).toString()).style.display = "block";
