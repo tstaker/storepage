@@ -64,7 +64,12 @@ function wishlist() {
 }
 
 function pushTowishlist(x,list){
-	var index = getIndexWishList(x - 1); //Added filter compatibility 
+	if(searched == 1){
+		searched = 0;
+		var index = getIndexWishList(x - 1); //Added filter compatibility 
+		searched = 1;
+	} 
+	else var index = getIndexWishList(x - 1); //Added filter compatibility 
 	var thisItem = products[index-1];
     var thisName = document.getElementById("itemName"+index).innerText = thisItem.name;
 	var thisPrice = moneyFormat(thisItem.price);
@@ -90,7 +95,12 @@ function pushTowishlist(x,list){
     removeBtn.onclick = remove;
     li.appendChild(removeBtn);
 	thisList.appendChild(li);
-	fixCellData(); //Fixes last issue with wishList compatibility, where text and prices would change on cells
+	if(searched == 1){
+		searched = 0;
+		fixCellData(); //Fixes last issue with wishList compatibility, where text and prices would change on cells
+		searched = 1;
+	} 
+	else fixCellData(); //Fixes last issue with wishList compatibility, where text and prices would change on cells
 }
 
 function remove(e) {
